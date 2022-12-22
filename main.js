@@ -174,11 +174,11 @@ modalNavbarClose.addEventListener('click', ()=>{
 
 //FUNCIONES
 function changeImageArrows(box){
-    box.style.backgroundImage= `url(../images/image-product-${imageCounter + 1}.jpg)`;
+    box.style.backgroundImage= `url(images/image-product-${imageCounter + 1}.jpg)`;
 }
 
 function changeImageThumbnails(box, number){
-    box.style.backgroundImage= `url(../images/image-product-${number}.jpg)`;
+    box.style.backgroundImage= `url(images/image-product-${number}.jpg)`;
 }
 
 function changeImageArrowsThumbnail(box, thumbnail){
@@ -186,7 +186,7 @@ function changeImageArrowsThumbnail(box, thumbnail){
         item.style.border= 'none';
     }
     thumbnail= thumbnails[modalImageCounter];
-    box.style.backgroundImage= `url(../images/image-product-${modalImageCounter + 1}.jpg)`;
+    box.style.backgroundImage= `url(images/image-product-${modalImageCounter + 1}.jpg)`;
     thumbnail.style.border= '4px solid hsl(26, 100%, 55%)';
     console.log(thumbnail);
 }

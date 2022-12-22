@@ -1,0 +1,35 @@
+@use 'variables' as v;
+
+@mixin arrows($top, $left){
+    position: absolute;
+    background-color: v.$White;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 12px;
+    top: $top;
+    left: $left;
+    cursor: pointer;
+    @media(min-width: 1000px){
+        // display: none;
+    }
+}
+
+@mixin button{
+    background-color: v.$Orange;
+    border: none;
+    height: 50px;
+    border-radius: .5em;
+    color: v.$White;
+    font-size: 15px;
+    font-weight: 700;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: v.$Orange-hover;
+    }
+}

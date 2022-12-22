@@ -1,0 +1,166 @@
+@use 'variables' as v;
+@use 'mixins';
+
+
+.content{
+    @media(min-width: 1000px){
+        padding: 45px 30px 30px 50px;
+        display: flex;
+    }
+}
+
+.gallery{
+    // position: relative;
+    &__image-container{
+        background-image: url(../images/image-product-1.jpg);
+        height: 300px;
+        width: 100%;
+        background-size: cover;
+        background-position-y: -35px;
+        position: relative;
+        @media(min-width: 1000px){
+            border-radius: .5em;
+            width: 350px;
+            flex-direction: column;
+            gap: 30px;
+            height: 350px;
+            background-position-y: 0;
+            &:hover{
+                cursor: zoom-in;
+            }
+        }
+    }
+    &__thumbnails{
+        display: none;
+        @media(min-width: 1000px){
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    }
+    &__previous{
+        @include mixins.arrows(130px, 15px);
+        @media(min-width: 1000px){
+            display: none;
+        }
+    }
+    &__next{
+        @include mixins.arrows(130px, 320px);
+        @media(min-width: 1000px){
+            display: none;
+        }
+    }
+    &__thumbnail{
+        width: 80px;
+        border-radius: .5em;
+        &:hover{
+            opacity: 40%;
+            // border: 4px solid v.$Orange;
+        }
+    }
+}
+
+.details{
+    padding: 20px;
+    @media(min-width: 1000px){
+        padding: 30px 100px;
+    }
+    &__company{
+        color: v.$Orange;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        margin-bottom: 12px;
+    }
+    &__title{
+        font-size: 25px;
+        margin-bottom: 12px;
+        @media(min-width: 1000px){
+            font-size: 35px;
+        }
+    }
+    &__description{
+        color: v.$Dark-grayish-blue;
+        line-height: 25px;
+        font-size: 0.95em;
+        margin-bottom: 20px;
+    }
+    &__counter{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @media(min-width: 1000px){
+            flex-direction: row;
+        }
+    }
+    &__prices{
+        display: flex;
+        align-items: center;
+        // border: 1px solid red;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        @media(min-width: 1000px){
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    }
+    &__now{
+        font-size: 30px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__disscount{
+        height: 100%;
+        font-size: 15px;
+        padding: 3px;
+        color: v.$Orange;
+        background-color: v.$Pale-orange;
+        border-radius: 20%;
+    }
+    &__before{
+        color: v.$Grayish-blue;
+        font-weight: 700;
+        text-decoration:line-through
+    }
+    &__button{
+        @include mixins.button;
+        @media(min-width: 1000px){
+            width: 100%;
+        }
+    }
+}
+
+.input{
+    display: flex;
+    justify-content: space-between;
+    background-color: v.$Light-grayish-blue;
+    height: 50px;
+    padding: 15px;
+    align-items: center;
+    border-radius: 0.5em;
+    @media(min-width: 1000px){
+        width: 40%;
+    }
+    &__number{
+        width: 100%;
+        background-color: v.$Light-grayish-blue;
+        border: none;
+        outline: none;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    &__minus{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__plus{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

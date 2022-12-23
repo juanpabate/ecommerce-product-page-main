@@ -435,7 +435,7 @@
   position: relative;
   width: 480px;
   height: 480px;
-  background-image: url(../images/image-product-1.jpg);
+  background-image: url(images/image-product-1.jpg);
   background-size: cover;
   border-radius: 0.5em;
   margin: 25px auto;

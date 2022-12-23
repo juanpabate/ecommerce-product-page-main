@@ -24,12 +24,21 @@
         background-size: cover;
         border-radius: .5em;
         align-items: center;
+        @media(min-width: 1500px){
+            height: 550px;
+        }
     }
     &__previous{
         @include mixins.arrows(260px, 280px);
+        @media(min-width: 1500px){
+            @include mixins.arrows(330px, 430px);
+        }
     }
     &__next{
         @include mixins.arrows(260px, 680px);
+        @media(min-width: 1500px){
+            @include mixins.arrows(330px, 1030px);
+        }
     }
     &__background{
         display: none;
@@ -46,9 +55,16 @@
         display: flex;
         justify-content: space-around;
         padding: 0 20px;
+        @media(min-width: 1500px){
+            justify-content: center;
+            gap: 20px;
+        }
     }
     &__thumbnail{
         width: 80px;
         border-radius: .5em;
+        @media(min-width: 1500px){
+            width: 100px;
+        }
     }
 }

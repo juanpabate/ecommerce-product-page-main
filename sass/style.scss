@@ -23,6 +23,9 @@ body{
       min-width: 1000px;
       position: relative;
     }
+    @media (min-width: 1500px){
+      min-width: 1500px;
+    }
 }
 
 footer{

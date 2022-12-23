@@ -10,7 +10,9 @@
     padding: 0;
     box-sizing: border-box;
   }
-
+html{
+  position: relative;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -18,10 +20,9 @@ body{
     max-width: 375px;
     height: 100vh;
     margin: auto;
-    position: relative;
     @media (min-width: 1000px){
       min-width: 1000px;
-      position: relative;
+      // position: relative;
     }
     @media (min-width: 1500px){
       min-width: 1500px;

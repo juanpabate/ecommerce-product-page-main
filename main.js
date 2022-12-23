@@ -128,11 +128,14 @@ const modalGalleryContain= document.querySelector('.modal-gallery__contain');
 const modalPrevious= document.querySelector('.modal-gallery__previous');
 const modalNext= document.querySelector('.modal-gallery__next');
 
+let galleryModalOpen= false;
+
 
 galleryImageContainer.addEventListener('click', ()=>{
     if(window.innerWidth>= 1000){
         galleryModal.style.display= 'block';
         modalImageCounter= 0;
+        galleryModalOpen= true;
     }
     thumbnails[0].style.border= '4px solid hsl(26, 100%, 55%)';
 });
@@ -142,6 +145,7 @@ galleryModalClose.addEventListener('click', ()=>{
     for(item of thumbnails){
         item.style.border= 'none';
     }
+    galleryModalOpen= false;
 });
 
 modalPrevious.addEventListener('click', ()=>{
@@ -170,6 +174,17 @@ hamburguerMenu.addEventListener('click', ()=>{
 
 modalNavbarClose.addEventListener('click', ()=>{
     modalNavbar.style.display= 'none';
+});
+
+//Ocultando el gallery modal cuando achiquen la pantalla
+window.addEventListener("resize", ()=>{
+    if(window.innerWidth<= 1000){
+        galleryModal.style.display= 'none';
+    }else{
+        if(galleryModalOpen== true){
+            galleryModal.style.display= 'block';
+        }
+    }
 });
 
 //FUNCIONES

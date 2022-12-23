@@ -10,9 +10,7 @@
     top: $top;
     left: $left;
     cursor: pointer;
-    @media(min-width: 1000px){
-        // display: none;
-    }
+    
 }
 
 @mixin button{

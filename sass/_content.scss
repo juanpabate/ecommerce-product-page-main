@@ -5,13 +5,15 @@
 .content{
     position: relative;
     @media(min-width: 1000px){
-        padding: 70px 30px 30px 50px;
+        padding: 30px 30px 30px 50px;
         display: flex;
+        height: 100%;
+        align-items: center;
     }
     @media(min-width: 1500px){
-        padding: 70px 90px 30px 90px;
-        display: flex;
+        padding: 70px 90px;
         justify-content: center;
+        height: 90%;
     }
 }
 
@@ -34,6 +36,10 @@
             &:hover{
                 cursor: zoom-in;
             }
+        }
+        @media(min-width: 1500px){
+            width: 450px;
+            height: 450px;
         }
     }
     &__thumbnails{
@@ -64,6 +70,9 @@
             opacity: 40%;
             // border: 4px solid v.$Orange;
         }
+        @media(min-width: 1500px){
+            width: 100px;
+        }
     }
 }
 
@@ -73,8 +82,12 @@
         padding: 30px 100px;
     }
     @media(min-width: 1500px){
-        width: 700px;
-        padding: 60px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 800px;
+        padding: 40px 100px;
+        height: 570px;
     }
     &__company{
         color: v.$Orange;
@@ -94,6 +107,9 @@
         line-height: 25px;
         font-size: 0.95em;
         margin-bottom: 20px;
+        @media(min-width: 1500px){
+            font-size: 18px;
+        }
     }
     &__counter{
         display: flex;
@@ -106,13 +122,17 @@
     &__prices{
         display: flex;
         align-items: center;
-        // border: 1px solid red;
         justify-content: space-between;
         margin-bottom: 25px;
         @media(min-width: 1000px){
             flex-direction: column;
             align-items: flex-start;
             gap: 10px;
+        }
+        @media(min-width: 1500px){
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
         }
     }
     &__now{
@@ -129,17 +149,24 @@
         color: v.$Orange;
         background-color: v.$Pale-orange;
         border-radius: 20%;
+        @media(min-width: 1500px){
+            margin-right: 15px;
+        }
     }
     &__before{
         color: v.$Grayish-blue;
         font-weight: 700;
-        text-decoration:line-through
+        text-decoration:line-through;
+        @media(min-width: 1500px){
+            font-size: 18px;
+        }
     }
     &__button{
         @include mixins.button;
         @media(min-width: 1000px){
             width: 100%;
         }
+        
     }
 }
 
@@ -155,7 +182,7 @@
         width: 40%;
     }
     @media(min-width: 1500px){
-        width: 120%;
+        width: 60%;
     }
     &__number{
         width: 100%;

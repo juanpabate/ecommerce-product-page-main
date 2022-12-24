@@ -121,15 +121,17 @@
 }
 @media (min-width: 1000px) {
   .content {
-    padding: 70px 30px 30px 50px;
+    padding: 30px 30px 30px 50px;
     display: flex;
+    height: 100%;
+    align-items: center;
   }
 }
 @media (min-width: 1500px) {
   .content {
-    padding: 70px 90px 30px 90px;
-    display: flex;
+    padding: 70px 90px;
     justify-content: center;
+    height: 90%;
   }
 }
 
@@ -152,6 +154,12 @@
   }
   .gallery__image-container:hover {
     cursor: zoom-in;
+  }
+}
+@media (min-width: 1500px) {
+  .gallery__image-container {
+    width: 450px;
+    height: 450px;
   }
 }
 .gallery__thumbnails {
@@ -204,6 +212,11 @@
 .gallery__thumbnail:hover {
   opacity: 40%;
 }
+@media (min-width: 1500px) {
+  .gallery__thumbnail {
+    width: 100px;
+  }
+}
 
 .details {
   padding: 20px;
@@ -215,8 +228,12 @@
 }
 @media (min-width: 1500px) {
   .details {
-    width: 700px;
-    padding: 60px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 800px;
+    padding: 40px 100px;
+    height: 570px;
   }
 }
 .details__company {
@@ -239,6 +256,11 @@
   line-height: 25px;
   font-size: 0.95em;
   margin-bottom: 20px;
+}
+@media (min-width: 1500px) {
+  .details__description {
+    font-size: 18px;
+  }
 }
 .details__counter {
   display: flex;
@@ -263,6 +285,13 @@
     gap: 10px;
   }
 }
+@media (min-width: 1500px) {
+  .details__prices {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
 .details__now {
   font-size: 30px;
   font-weight: 700;
@@ -278,10 +307,20 @@
   background-color: hsl(25deg, 100%, 94%);
   border-radius: 20%;
 }
+@media (min-width: 1500px) {
+  .details__disscount {
+    margin-right: 15px;
+  }
+}
 .details__before {
   color: hsl(220deg, 14%, 75%);
   font-weight: 700;
   text-decoration: line-through;
+}
+@media (min-width: 1500px) {
+  .details__before {
+    font-size: 18px;
+  }
 }
 .details__button {
   background-color: hsl(26deg, 100%, 55%);
@@ -323,7 +362,7 @@
 }
 @media (min-width: 1500px) {
   .input {
-    width: 120%;
+    width: 60%;
   }
 }
 .input__number {
@@ -530,7 +569,7 @@
   width: 50%;
   margin: auto;
 }
-@media (min-width: 1500px) {
+@media (min-width: 1000px) {
   .modal-gallery__thumbnails {
     justify-content: center;
     gap: 20px;
@@ -539,6 +578,11 @@
 .modal-gallery__thumbnail {
   width: 80px;
   border-radius: 0.5em;
+}
+@media (min-width: 1000px) {
+  .modal-gallery__thumbnail {
+    width: 90px;
+  }
 }
 @media (min-width: 1500px) {
   .modal-gallery__thumbnail {

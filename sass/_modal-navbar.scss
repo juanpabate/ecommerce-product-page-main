@@ -63,7 +63,7 @@
         justify-content: space-around;
         width: 50%;
         margin: auto;
-        @media(min-width: 1500px){
+        @media(min-width: 1000px){
             justify-content: center;
             gap: 20px;
         }
@@ -71,6 +71,9 @@
     &__thumbnail{
         width: 80px;
         border-radius: .5em;
+        @media(min-width: 1000px){
+            width: 90px;
+        }
         @media(min-width: 1500px){
             width: 100px;
         }

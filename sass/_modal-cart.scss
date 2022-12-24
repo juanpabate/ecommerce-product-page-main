@@ -4,7 +4,7 @@
 .cart-modal{
     display: none;
     position: absolute;
-    top: 80px;
+    top: 10px;
     width: 360px;
     background-color: v.$White;
     height: 220px;
@@ -51,7 +51,7 @@
         @include mixins.button;
     }
     @media(min-width: 1000px){
-        top: 95px;
+        // top: 95px;
         left: 610px;
     }
     @media(min-width: 1500px){

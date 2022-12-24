@@ -141,7 +141,7 @@ galleryImageContainer.addEventListener('click', ()=>{
 });
 galleryModalClose.addEventListener('click', ()=>{
     galleryModal.style.display= 'none';
-    modalGalleryContain.style.backgroundImage= 'url(../images/image-product-1.jpg)'
+    modalGalleryContain.style.backgroundImage= 'url(images/image-product-1.jpg)'
     for(item of thumbnails){
         item.style.border= 'none';
     }
